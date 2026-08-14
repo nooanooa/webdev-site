@@ -1,0 +1,19 @@
+body {
+  background-color:rgb(255, 255, 255)
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    height:50px;
+    z-index: var(--z-index-sticky-header);
+    background-color:rgb(17, 161, 41);
+    align-items: center;
+}
+
+header > nav > h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
