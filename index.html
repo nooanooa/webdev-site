@@ -12,34 +12,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
     <header>
         <div class="header_div">
-            <img id="logo" src="icon.png">
+            <img id="logo" alt="Sivuston Logo" src="img/icon.png">
             <h2>WebDev Bootcamp</h2>
         </div>
 
         <div id="navbar_div">
             <nav>
-                <a><h2 id="landing" >Etusivu</h2></a>
-                <a><h2 id="info" >Tietoa</h2></a>
-                <a><h2 id="signing">Ilmoittautuminen</h2></a>
+                <a href="#top"><h2 id="landing">Etusivu</h2></a>
+                <a href="#info"><h2 id="info">Tietoa</h2></a>
+                <a href="#signingpage"><h2 id="signing">Ilmoittautuminen</h2></a>
             </nav>
         </div>
     </header>
 
     <!-- Etusivu -->
     <section id="frontpage" class="container">
+
+
         <div id="tophero">
             <h1><strong>Opi koodaamaan syksyllä 2026!</strong></h1>
         </div>
 
         <div id="bottomhero">
-            <img id="pic-1" src="kuva-1.png">
+            <img id="pic-1" alt="Kuva pojasta joka käyttää puhelinta sinisellä taustalla" src="img/kuva-1.png">
 
             <div id="bottomhero-text">
-                <h3>Astu ohjelmoinnin ja verkkokehityksen maailmaan <i>helposti</i> ja <i>hauskasti.</i></h3>
-                <h3>Kurssimme on suunniteltu <strong>täysin</strong> aloittelijoille - aiempaa kokemusta ei tarvita.</h3>
+                <h3>Astu ohjelmoinnin ja verkkokehityksen maailmaan helposti ja hauskasti.</h3>
+                <h3>Kurssimme on suunniteltu täysin aloittelijoille - aiempaa kokemusta ei tarvita.</h3>
             </div>
         </div>
     </section>
@@ -74,6 +76,12 @@
         
         <div>
             <!-- tähän tulee aikataulu -->
+            <thead>
+                <th>testi11111</th>
+            </thead>
+            <tbody>
+                <td>testi1</td>
+            </tbody>
         </div>
 
         <div>
@@ -94,10 +102,13 @@
     
 
     <!-- Ilmoittautuminen -->
-    <section class="container_2">
-
+    <section id="signingpage" class="container_2">
     </section>
-    
+
+    <footer>
+        <h5>nooanooa™ 2026. Kaikki oikeudet pidätetään.</h5>
+    </footer>
+
 </body>
     <script src="script.js" defer></script>
 </html>
