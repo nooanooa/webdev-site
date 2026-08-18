@@ -12,21 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
-<body id="top">
-    <header>
+<body>
+    <header role="banner">
         <div class="header_div">
             <img id="logo" alt="Sivuston Logo" src="img/icon.png">
             <h2>WebDev Bootcamp</h2>
         </div>
 
         <div id="navbar_div">
-            <nav>
-                <a href="#top"><h2>Etusivu</h2></a>
+            <nav role="navigation">
+                <a href="#frontpage"><h2>Etusivu</h2></a>
                 <a href="#info"><h2>Tietoa</h2></a>
                 <a href="#signin"><h2>Ilmoittautuminen</h2></a>
             </nav>
         </div>
     </header>
+
+    <main role="main">
 
     <!-- Etusivu -->
     <section id="frontpage" class="container">
@@ -40,7 +42,7 @@
             <img id="pic-1" alt="Kuva pojasta joka käyttää puhelinta sinisellä taustalla" src="img/kuva-1.png">
 
             <div id="bottomhero-text">
-                <h3>Astu ohjelmoinnin ja verkkokehityksen maailmaan helposti ja hauskasti.</h3>
+                <h2>Astu ohjelmoinnin ja verkkokehityksen maailmaan helposti ja hauskasti.</h2>
                 <h3>Kurssimme on suunniteltu täysin aloittelijoille - aiempaa kokemusta ei tarvita.</h3>
             </div>
         </div>
@@ -72,19 +74,48 @@
     <section id="info" class="container">
         <div>
             <h1>Tietoa</h1>
+            <h2>Kurssin aikataulu</h2>
         </div>
         
-        <div>
+        <div id="schedule-wrapper">
             <!-- tähän tulee aikataulu -->
-            <thead>
-                <th>testi11111</th>
-            </thead>
-            <tbody>
-                <td>testi1</td>
-            </tbody>
+            <table class="schedule">
+                <thead>
+                    <tr>
+                        <th>Maanantai</th>
+                        <th>Tiistai</th>
+                        <th>Keskiviikko</th>
+                        <th>Torstai</th>
+                        <th>Perjantai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:00-10:00</td>
+                        <td>8:00-10:00</td>
+                        <td>8:00-10:00</td>
+                        <td>8:00-10:00</td>
+                        <td>8:00-10:00</td>
+                    </tr>
+                    <tr>
+                        <td>10:15-12:30</td>
+                        <td>10:15-12:30</td>
+                        <td>10:15-12:30</td>
+                        <td>10:15-12:30</td>
+                        <td>10:15-12:30</td>
+                    </tr>
+                    <tr>
+                        <td>13:00-14:30</td>
+                        <td>13:00-14:30</td>
+                        <td>13:00-14:30</td>
+                        <td>13:00-14:30</td>
+                        <td>13:00-14:00</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <div>
+        <div id="course-info">
             <h2>Kursilla opiskellaan kolmea kieltä:</h2>
             <ol>
                 <li> HTML (HyperText Markup Language)</li>
@@ -95,7 +126,10 @@
             <h2>Kursissa on lisäksi pikkuhaasteita joka perjantai, jota voit valinnaisesti tehdä.</h2>
         </div>
 
-        <div>
+        <div id="icons">
+            <img alt= "Kuva HTML5:stä" src="img/html5.png">
+            <img alt= "Kuva CSS:stä"src="img/css.png">
+            <img alt= "Kuva JS:stä" src="img/js.png">
             <!--tähän voi tulla iconit, menee edes ja taakse koska miks ei : D -->
         </div>
     </section>
@@ -105,8 +139,9 @@
     <section id="signin" class="container_2">
     </section>
 
-    <footer>
-        <h5>nooanooa™ 2026. Kaikki oikeudet pidätetään.</h5>
+    </main>
+    <footer role="contentinfo">
+        <p>nooanooa™ 2026. Kaikki oikeudet pidätetään.</p>
     </footer>
 
 </body>
