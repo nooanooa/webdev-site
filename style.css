@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -7,18 +7,30 @@ html, body {
   overflow-x: hidden;
 }
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
+
+section {
+  scroll-margin-top: 105px;
+}
+
 :root {
   z-index: var(--z-index-sticky-header);
 }
 
 body {
+  padding-top: 90px;
   background-color: rgb(255, 255, 255);
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -26,6 +38,7 @@ header {
   background-color: darkgreen;
   padding: 10px 20px;
   overflow: hidden;
+  outline:solid rgb(189, 189, 189);
 }
 
 .header_div {
@@ -35,16 +48,48 @@ header {
   max-height: 42px;
 }
 
+.header_div > h2 {
+  color: white;
+}
+
 #pic-1 {
-  max-height: 500px;
-  margin-right: auto;
+  width: 267px;
+  height: 400px;
+  max-height: 267px;
+  max-height: 400px;
   align-self:center;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#pic-2 {
+  width:300px;
+  height:450px;
+  max-width:300px;
+  max-height:450px;
+  margin-left: auto;
+  order: 2;
 }
 
 #logo {
   width: 35px;
   height: 35px;
   object-fit: contain;
+}
+
+@keyframes bgScroll {
+  0% {
+    background-position : 0px 0px
+  }
+  100% {
+    background-position : 128px -128px
+  }
+}
+
+
+#frontpage {
+  background-image: url("img/checker.png");
+  background-position: center;
+  animation: bgScroll 10s linear infinite;
 }
 
 #header_div, #navbar_div > nav {
@@ -61,30 +106,240 @@ header {
   flex-wrap: wrap;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6, a, ul, ol, li, th, td, p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 a {
-  color: inherit;
+  width: fit-content;
+  margin-right: auto;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  transition: color 0.25s ease-out;
+  transition: background-color 0.25s ease-out;
 }
 
 a:hover {
-  color: rgb(212, 212, 212);
+  background-color: rgb(0, 130, 0);
+}
+
+#info ol {
+  width: min(500px, 90%);
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+#info li {
+  width: auto;
+  margin: 0 auto;
+  list-style-position: inside;
+  font-size:1.2rem;
 }
 
 .container , .container_2{
-  height: 600px;
+  overflow:hidden;
+  height:600px;
+  max-height: 1000px;
   max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 2px solid;
+  outline-color:rgb(200, 200, 200)
+}
+
+.container_2 {
+  background-color: rgb(245, 245, 245);
+}
+
+#frontpage {
+  flex-direction: column;
+  align-items:center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+#bottomhero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: min(1100px, 90%);
+}
+
+#bottomhero-text {  outline:solid;
+  background-color: rgb(50, 122, 61);
+  padding: 25px 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+#bottomhero-text > h3 {
+  font-size:25px;
+}
+#whyus {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px 60px;
+  text-align: center;
+  height:800px;
+  background: linear-gradient(#f5f5f5 25%, #96cc96 75%)
+}
+
+.card {
+  outline:solid;
+  width: min(760px, 85%);
+  background-color: rgb(50, 122, 61);
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card > h2,
+.card > h3,
+#bottomhero-text > h3,
+#bottomhero-text > h2,
+#course-info > h2,
+#course-info > ol > li,
+#signin-board > h2 {
+  color:white;
+}
+
+#info{
+  flex-direction: column;
+  align-items:center;
+  justify-content:flex-start;
+  text-align:center;
+  display: flex;
+  height:1000px;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+th {
+  background-color: rgb(50, 122, 61);
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+#schedule-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#course-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: min(1000px, 90%);
+  margin: 20px auto 0;
+}
+
+#course-info {
+  gap:15px;
+  outline:solid;
+  background-color: rgb(50, 122, 61);
+  padding: 25px 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+@keyframes MoveIcons {
+  0% {
+    margin-right:0px;
+    margin-left:200px;
+    rotate: 5deg;
+  }
+
+  50% {
+    margin-right: 200px;
+    margin-left:0px;
+    rotate: -5deg;
+  }
+
+  100% {
+    margin-right:0px;
+    margin-left:200px;
+    rotate: 5deg;
+  }
+}
+
+#icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: MoveIcons 12s ease-in-out infinite;
+}
+
+#icons > img {
+  margin-top:30px;
+  width:80px;
+  height:80px;
+  max-width:80px;
+  max-height:80px;
+}
+
+
+#signin {
+  flex-direction:column;
+  display:flex;
+  justify-content:center;
+}
+
+#signin > p {
+  font-size: 1.5rem;
+}
+
+#signin-board {
+  outline:solid;
+  background-color: rgb(50, 122, 61);
+  padding: 25px 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height:500px;
+  margin-bottom:20px;
+}
+
+footer {
+  height: 70px;
+  background-color: darkgreen;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container_2 {
-  background-color: rgb(245, 245, 245);
+footer > p {
+  color: white;
+  margin: 0;
 }

@@ -13,64 +13,142 @@
 </head>
 
 <body>
-    <header>
+    <header role="banner">
         <div class="header_div">
-            <img id="logo" src="icon.png">
+            <img id="logo" alt="Sivuston Logo" src="img/icon.png">
             <h2>WebDev Bootcamp</h2>
         </div>
 
         <div id="navbar_div">
-            <nav>
-                <a>
-                    <h2>Etusivu</h2>
-                </a>
-
-                <a>
-                    <h2>Tietoa</h2>
-                </a>
-
-                <a>
-                    <h2>Ilmoittautuminen</h2>
-                </a>
+            <nav role="navigation">
+                <a href="#frontpage"><h2>Etusivu</h2></a>
+                <a href="#info"><h2>Tietoa</h2></a>
+                <a href="#signin"><h2>Ilmoittautuminen</h2></a>
             </nav>
         </div>
     </header>
 
+    <main role="main">
+
     <!-- Etusivu -->
-    <section class= "container">
-        <div>
+    <section id="frontpage" class="container">
+
+
+        <div id="tophero">
             <h1><strong>Opi koodaamaan syksyllä 2026!</strong></h1>
-            <img id="pic-1" src="kuva-1.png">
         </div>
 
-        <div>
-            <h3>Astu ohjelmoinnin ja verkkokehityksen maailmaan <i>helposti</i> ja <i>hauskasti.</i></h3>
-            <h3>Kurssimme on suunniteltu <strong>täysin</strong> aloittelijoille - aiempaa kokemusta ei tarvita.</h3>
+        <div id="bottomhero">
+            <img id="pic-1" alt="Kuva pojasta joka käyttää puhelinta sinisellä taustalla" src="img/kuva-1.png">
+
+            <div id="bottomhero-text">
+                <h2>Astu ohjelmoinnin ja verkkokehityksen maailmaan helposti ja hauskasti.</h2>
+                <h3>Kurssimme on suunniteltu täysin aloittelijoille - aiempaa kokemusta ei tarvita.</h3>
+            </div>
         </div>
     </section>
 
-    <section class="container_2">
+    <section id="whyus" class="container_2">
         <div>
             <h1>Miksi meidän kurssi?</h1>
         </div>
 
         <div class="card">
-            <h2>Ei pelkkää teoriaa!</h2>
+            <h2>Käytännönlähteistä oppimista</h2>
+            <h3>Ei pelkkää teoriaa! Pääset rakentamaan omia verkkosivuja ja sovelluksia ensimmäisestä päivästä lähtien.</h3>
+        </div>
+
+        <div class="card">
+            <h2>Mukava ja tukeva yhteistö</h2>
+            <h3>Opsikele yhdessä muiden kanssa. Saat henkilökohtaista opastusta ja apua ongelmatilanteissa aina kun tarvitset.</h3>
+        </div>
+
+        <div class="card">
+            <h2>Arvokas sertifikaatti</h2>
+            <h3>Kurssin suoritettuasi saat virallisen todistuksen, jolla voit osoittaa taitosi tuleville työnantajille tai jatko-opinnoissa.</h3>
         </div>
     </section>
 
 
     <!-- Tietoa -->
-    <section class="container">
+    <section id="info" class="container">
+        <div>
+            <h1>Tietoa</h1>
+            <h2>Kurssin aikataulu</h2>
+        </div>
+        
+        <div id="schedule-wrapper">
+            <table class="schedule">
+                <thead>
+                    <tr>
+                        <th>Maanantai</th>
+                        <th>Tiistai</th>
+                        <th>Keskiviikko</th>
+                        <th>Torstai</th>
+                        <th>Perjantai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:00-10:00</td>
+                        <td>8:00-10:00</td>
+                        <td>8:00-10:00</td>
+                        <td>8:00-10:00</td>
+                        <td>8:00-10:00</td>
+                    </tr>
+                    <tr>
+                        <td>10:15-12:30</td>
+                        <td>10:15-12:30</td>
+                        <td>10:15-12:30</td>
+                        <td>10:15-12:30</td>
+                        <td>10:15-12:30</td>
+                    </tr>
+                    <tr>
+                        <td>13:00-14:30</td>
+                        <td>13:00-14:30</td>
+                        <td>13:00-14:30</td>
+                        <td>13:00-14:30</td>
+                        <td>13:00-14:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
+        
+        <div id="course-wrapper">
+            <img id="pic-2" alt="Kurssiin liittyvä kuva" src="img/kuva-2.png">
+            <div id="course-info">
+                <h2>Kurssilla opiskellaan kolmea kieltä:</h2>
+                <ol>
+                    <li> HTML (HyperText Markup Language)</li>
+                    <li> CSS (Cascading Style Sheets)</li>
+                    <li> JS (JavaScript)</li>
+                </ol>
+                <h2>Jos haluat opiskella muuta kieltä, älä epäröi ja kysy meiltä lupaa.</h2>
+                <h2>Kursissa on lisäksi pikkuhaasteita joka perjantai, jota voit valinnaisesti tehdä.</h2>
+            </div>
+        </div>
+
+        <div id="icons">
+            <img alt= "Kuva HTML5:stä" src="img/html5.png">
+            <img alt= "Kuva CSS:stä"src="img/css.png">
+            <img alt= "Kuva JS:stä" src="img/js.png">
+        </div>
     </section>
     
 
     <!-- Ilmoittautuminen -->
-    <section class="container_2">
-
+    <section id="signin" class="container_2">
+        <p>Oletko kiinnostunut? Ilmoittaudu!</p>
+        <div id="signin-board">
+        </div>
     </section>
-    
+
+    </main>
+    <footer role="contentinfo">
+        <p>nooanooa™ 2026. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
 </body>
     <script src="script.js" defer></script>
 </html>
