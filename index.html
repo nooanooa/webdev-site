@@ -10,25 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header role="banner">
+    <header>
         <div class="header_div">
             <img id="logo" alt="Sivuston Logo" src="img/icon.png">
             <h2>WebDev Bootcamp</h2>
         </div>
 
         <div id="navbar_div">
-            <nav role="navigation">
+            <nav>
                 <a href="#frontpage"><h2>Etusivu</h2></a>
                 <a href="#info"><h2>Tietoa</h2></a>
-                <a href="#signin"><h2>Ilmoittautuminen</h2></a>
+                <a href="#navsignin"><h2>Ilmoittautuminen</h2></a>
             </nav>
         </div>
     </header>
 
-    <main role="main">
+    <main>
 
     <!-- Etusivu -->
     <section id="frontpage" class="container">
@@ -131,7 +132,7 @@
 
         <div id="icons">
             <img alt= "Kuva HTML5:stä" src="img/html5.png">
-            <img alt= "Kuva CSS:stä"src="img/css.png">
+            <img alt= "Kuva CSS:stä" src="img/css.png">
             <img alt= "Kuva JS:stä" src="img/js.png">
         </div>
     </section>
@@ -139,16 +140,47 @@
 
     <!-- Ilmoittautuminen -->
     <section id="signin" class="container_2">
-        <p>Oletko kiinnostunut? Ilmoittaudu!</p>
+        <h1 id="navsignin">Oletko kinnostunut? Ilmoittaudu!</h1>
         <div id="signin-board">
-        </div>
-    </section>
+            <form id="theform">
+                <div>
+                    <label for="uname">Nimi* <input id="uname" type="text" required placeholder=". . ." ></label>
 
+                    <label for="email">Sähköposti* <input id="email" type="email" required placeholder=". . ."></label>
+
+                    <label for="field">Opintolinja* 
+                        <select id="field" required>
+                            <option value="">Valitse opintolinja</option>
+                            <option value="SK">Salpaus Keskustakampus</option>
+                            <option value="SH">Salpaus Heinola</option>
+                            <option value="KK">Kouvolan Koulu</option>
+                            <option value="CK">Cool Kids School</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div>
+                    <p>Aiempi kokemus*</p>
+                    <input type="radio" id="beginner" name="experience" value="Aloittelija" required>
+                    <label for="beginner">Aloittelija</label>
+
+                    <input type="radio" id="experienced" name="experience" value="Kokenut" required>
+                    <label for="experienced">Kokenut</label>
+                </div>
+
+                <div>
+                    <label for="extrainfo">Lisätiedot <textarea id="extrainfo" placeholder=". . ."></textarea></label>
+                </div>
+            </form>
+        </div>
+
+        <input type="submit" form="theform" id="send" value="Lähetä">
+    </section>
+    <!-- hgang was here -->
     </main>
-    <footer role="contentinfo">
+
+    <footer>
         <p>nooanooa™ 2026. Kaikki oikeudet pidätetään.</p>
     </footer>
-
 </body>
-    <script src="script.js" defer></script>
 </html>
