@@ -210,7 +210,8 @@ a:hover {
 #course-info > h2,
 #course-info > ol > li,
 #signin-board p,
-#signin-board label  {
+#signin-board label,
+#navsignin  {
   color:white;
 }
 
@@ -312,10 +313,19 @@ td {
 
 
 #signin {
+  background:url("img/kuva-3.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
   height:700px;
   flex-direction:column;
   display:flex;
   justify-content:center;
+}
+
+#navsignin {
+  background-color:darkgreen;
+  outline: solid black;
 }
 
 #signin > p {
