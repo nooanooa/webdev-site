@@ -17,8 +17,6 @@ if (form) {
             }
         }
 
-        console.log(experience)
-
         const tiedot = [user.value, mail.value, field.value, experience.value, extrainfo.value]
 
         alert(`Kiitos lähettämisestä! \nTiedot: ${String(tiedot)}`);
